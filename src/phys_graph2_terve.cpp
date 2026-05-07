@@ -7,7 +7,7 @@
  * up arrow to increase angle
  * down arrow to decrease angle
  * enter key to launch projectile
-
+ 
  Author: Markus Juhala
  */
 #include <windows.h>
