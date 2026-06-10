@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+// Koetetaan kuustoista bittistä muuntoa !
+int bitti=16;
+int laskuri=0;
+int jakotulos=255;
+int jakojaannos=0;
+int tulos[16];
+int main(){
+// Label funktio
+funktio:	
+//laskuri++;
+
+	//if(jakotulos > 2)
+		jakojaannos = jakotulos;
+		jakotulos = jakotulos/2;
+		jakojaannos = jakojaannos%2;
+	//else
+	//	jakotulos = 2/jakotulos;
+	tulos[laskuri]=jakojaannos;
+	
+	//if(jakotulos>0)goto funktio;
+	//else goto end;
+	if(laskuri == bitti-1){
+		goto end;
+	}else{
+		//taulukko[laskuri]=0;
+		if(jakotulos==0){
+			//cout << "-" << endl;
+		}
+		laskuri++;
+		goto funktio;
+	}
+
+
+end:
+	for(int a=bitti-1; a>=0; a--){
+		cout << tulos[a] << endl;
+	}
+return 0;
+}
