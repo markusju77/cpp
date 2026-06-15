@@ -1,0 +1,1 @@
+Käännä sovellus Win11 (MinGW) komennolla: sh asm_ba.sh

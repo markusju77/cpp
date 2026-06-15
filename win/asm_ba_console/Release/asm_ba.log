@@ -1,0 +1,36 @@
+﻿  asm_ba.cpp
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(191,21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(304,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(315,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(324,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(331,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(344,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(354,15): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(355,15): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(356,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(367,15): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(368,15): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(369,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(379,15): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(380,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(394,15): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(395,15): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\asm_ba.cpp(396,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  infix_to_postfix.cpp
+C:\c-ohjelmat\ba\unordered_map\infix_to_postfix.cpp(84,10): warning C4018: '<': signed/unsigned mismatch
+  karnaugh.cpp
+  quine_mccluskell.cpp
+C:\c-ohjelmat\ba\unordered_map\quine_mccluskell.cpp(784,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\quine_mccluskell.cpp(799,21): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\quine_mccluskell.cpp(856,21): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\quine_mccluskell.cpp(898,44): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\c-ohjelmat\ba\unordered_map\quine_mccluskell.cpp(941,23): warning C4018: '<': signed/unsigned mismatch
+C:\c-ohjelmat\ba\unordered_map\quine_mccluskell.cpp(1038,23): warning C4018: '<': signed/unsigned mismatch
+C:\c-ohjelmat\ba\unordered_map\quine_mccluskell.cpp(1061,24): warning C4018: '<': signed/unsigned mismatch
+C:\c-ohjelmat\ba\unordered_map\quine_mccluskell.cpp(1179,18): warning C4018: '<': signed/unsigned mismatch
+C:\c-ohjelmat\ba\unordered_map\quine_mccluskell.cpp(1183,18): warning C4018: '<': signed/unsigned mismatch
+C:\c-ohjelmat\ba\unordered_map\quine_mccluskell.cpp(1240,26): warning C4018: '<': signed/unsigned mismatch
+C:\c-ohjelmat\ba\unordered_map\quine_mccluskell.cpp(1313,18): warning C4018: '<': signed/unsigned mismatch
+C:\c-ohjelmat\ba\unordered_map\quine_mccluskell.cpp(1318,17): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  asm_ba.vcxproj -> C:\c-ohjelmat\ba\unordered_map\Release\asm_ba.exe

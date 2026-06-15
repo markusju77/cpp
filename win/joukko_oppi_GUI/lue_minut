@@ -1,0 +1,15 @@
+					JOUKKO_OPPI LINUX
+					=================
+- Käännä sovellus juurihakemistosta: sh joukko-oppi.sh
+- Suorita sovellus /bin -hakemistossa: ./joukko_oppi.exe
+
+					JOUKKO_OPPI KÄYTTÖOHJE
+					======================
+1. Valitse tehtäväpalkista -> Joukot
+2. Valitse Syötä joukot
+3. Anna joukkojen lukumäärä (esim. joukot W ja X niin annat joukon lukumääräksi 2)
+4. Syötä joukon nimet (esim. W ja X) ja niiden alle pilkuin eriteltyinä joukko (esim. 2,3 ja 1,3)
+5. Valitse tehtäväpalkista -> Lauseke
+6. Valitse Syötä lauseke ja anna lauseke muodossa:
+(W∪X)
+

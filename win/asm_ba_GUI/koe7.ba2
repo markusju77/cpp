@@ -1,0 +1,12 @@
+postfix
+AB*A+
+totuustaulu
+A:0011
+B:0101
+*:0001
+A:0011
++:0011
+SOP
+F(A,B)=(A)
+POS
+F(A,B)=(A)
