@@ -1,5 +1,0 @@
-Developing environment:
-
-- MSYS2 MinGW64 (Windows 11)
-- Libraries needed: opengl32 glu32 freeglut winmm
-use the make -command in root directory!
