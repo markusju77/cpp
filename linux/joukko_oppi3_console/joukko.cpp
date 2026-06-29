@@ -301,7 +301,9 @@ int** lauseke_postfix() {
 		//int* koe = tayta_joukot(joukon_koko, c);
 		for (int j = 0; j != joukon_koko[c]; j++) {
 			//joukot[c][j] = koe[j];
-			cout << joukot[c][j] << endl;
+			
+			//cout << joukot[c][j] << endl;
+			
 			//cout << "joukot[" << c << "][" << j << "]:";
 			//cout << koe[j] << endl;
 		}
@@ -325,7 +327,7 @@ int** lauseke_postfix() {
 	int koe = pow(2, muuttujatlkm);
 	int g=0;
 	universumi = new int[koe];
-	cout << "pow:" << pow(2, muuttujatlkm) << endl;
+	//cout << "pow:" << pow(2, muuttujatlkm) << endl;
 	cout << "universumi:" << endl;
 
 	for (g = 0; g < pow(2, muuttujatlkm); g++) {
@@ -844,8 +846,10 @@ int* laske_lauseke(const wchar_t* toinen, int** tmp2) {
 		if(lkoko > 0)luku2 = pop();
 		if(lkoko2 > 0)luku1 = pop();
 		//cout << "size_luku1:" << luku1.size() << endl;
-		cout << "lkoko:" << lkoko << endl;
-		cout << "lkoko2:" << lkoko2 << endl;
+		
+		//cout << "lkoko:" << lkoko << endl;
+		//cout << "lkoko2:" << lkoko2 << endl;
+		
 		if(luku2 != 0){
 			for (int bb = 0; bb < lkoko; bb++) {
 				//cout << "luku2:" << luku2[bb] << endl;
@@ -942,8 +946,8 @@ int main(void) {
     	std::cout << "Käytössä oleva lokaali: " << lokaali << "\n";
     
     	// UTF-8 testaus
-    	std::string testi = u8"Gentoossa ääkköset (äöå) toimivat! \u2713\n";
-    	std::cout << testi;
+    	//std::string testi = u8"Gentoossa ääkköset (äöå) toimivat! \u2713\n";
+    	//std::cout << testi;
     	/*
     	std::cout << "Kirjoita jotain (esim. ääkkösiä): ";
     	string st;
