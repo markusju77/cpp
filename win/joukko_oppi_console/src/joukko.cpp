@@ -80,17 +80,17 @@ int** joukot;
 std::vector<int> tulos(10);
 
 void push(int* f, int fkoko) {
-	wcout << "push:" << endl;
+	//wcout << "push:" << endl;
 	int koko = 0;
 
 	if (fkoko == 0) {
 		koko = sizeof(f) / sizeof(int);
-		wcout << "sizeof(f):" << sizeof(sizeof(f)) << endl;
-		wcout << "sizeof(int):" << sizeof(int) << endl;
+		//wcout << "sizeof(f):" << sizeof(sizeof(f)) << endl;
+		//wcout << "sizeof(int):" << sizeof(int) << endl;
 	}else{
 		koko = fkoko;
-		wcout << "fkoko:" << koko << endl;
-		wcout << "\ntulos.size:" << sizeof(f) / sizeof(int*) << endl;
+		//wcout << "fkoko:" << koko << endl;
+		//wcout << "\ntulos.size:" << sizeof(f) / sizeof(int*) << endl;
 	}	
 	/*
 	for (int aa = 0; aa < koko; aa++) {
@@ -300,7 +300,7 @@ int** lauseke_postfix() {
 		//cout << "koe" << endl;		
 
 		for (int d = 0; d < joukon_koko[c]; d++) {
-			wcout << "joukot[" << c << "][" << d << "]:" << joukot[c][d] << endl;
+			//wcout << "joukot[" << c << "][" << d << "]:" << joukot[c][d] << endl;
 
 			if (ei_joukossa(joukot[c][d], c, joukon_koko[c], e)) {
 				//cout << "ei joukossa:" << joukot[c][d] << endl;
@@ -332,7 +332,7 @@ int** lauseke_postfix() {
 	}
 	ukoko = e;
 	for (int ddd = 0; ddd < 2; ddd++) {
-		wcout << "joukot[" << 0 << "][" << ddd << "]:" << joukot[0][ddd] << endl;
+		//wcout << "joukot[" << 0 << "][" << ddd << "]:" << joukot[0][ddd] << endl;
 	}
 	return joukot;
 }
@@ -373,9 +373,9 @@ wstring muunna_postfix() {
 	
 	//wcout << L"infix: " << infix << endl;
 	//muuttujatlkm = collectMlkm(infix);
-	wcout << "Muuttujien lkm:" << muuttujatlkm << endl;
+	//wcout << "Muuttujien lkm:" << muuttujatlkm << endl;
 	//infix = concats(infix);
-	wcout << L"infix:" << infix << endl;
+	//wcout << L"infix:" << infix << endl;
 	
 	mlkm2 = muuttujatlkm;
 	wstring postfix = convert(infix);
@@ -423,20 +423,20 @@ int* laske_lauseke(const wchar_t* toinen, int** tmp2) {
 	int lkoko = 0;
 	int lkoko2 = 0;
 
-	wcout << "toinen:" << toinen << endl;
+	//wcout << "toinen:" << toinen << endl;
 	val = new int* [palautaKoko()];
 	ival = new int [palautaKoko()];
-	wcout << "Lausekkeen koko:" << palautaKoko() << endl;
+	//wcout << "Lausekkeen koko:" << palautaKoko() << endl;
 
 	laskuri = muuttujatlkm - 1;
 	//laskuri = haeMlkm()-2;
 	//cout << "haeMlkm:" << laskuri << endl;
 	while ((tyyppi = toinen[i]) != '\0') {
 		//while((type = getop(s)) != 10){
-		wcout << "toinen[i]:" << toinen[i] << endl;
+		//wcout << "toinen[i]:" << toinen[i] << endl;
 		switch (tyyppi) {
 		case 0x2282:
-			wcout << "Well congrats unicode!" << endl;
+			//wcout << "Well congrats unicode!" << endl;
 			luku2 = pop();
 			luku1 = pop();
 			lkoko = size_pop();
@@ -466,7 +466,7 @@ int* laske_lauseke(const wchar_t* toinen, int** tmp2) {
 			break;
 		case 0x0057:
 			for (int dd = 0; dd < 2; dd++) {
-				wcout << "tmp2[" << 0 << "][" << dd << "]:" << tmp2[0][dd] << endl;
+				//wcout << "tmp2[" << 0 << "][" << dd << "]:" << tmp2[0][dd] << endl;
 			}
 			// JATKA T�ST�, tarkkaile W:n arvoa !!!
 			wcout << "W:";
@@ -474,7 +474,7 @@ int* laske_lauseke(const wchar_t* toinen, int** tmp2) {
 			
 			// joukot[0] viittaa annettuun joukkoon W!!
 			push(joukot[0], joukon_koko[0]);
-			wcout << "joukot ohi" << endl;
+			//wcout << "joukot ohi" << endl;
 			wcout << endl;
 			//cout << "laskuri:" << laskuri << endl;
 			break;
@@ -531,21 +531,21 @@ int* laske_lauseke(const wchar_t* toinen, int** tmp2) {
 			//lkoko3 = sizeof(luku1) / sizeof(luku1[0]);
 			//lkoko4 = sizeof(luku2) / sizeof(luku2[0]);
 			
-			wcout << "lkoko3:" << lkoko3 << endl;
-			wcout << "lkoko4:" << lkoko4 << endl;
+			//wcout << "lkoko3:" << lkoko3 << endl;
+			//wcout << "lkoko4:" << lkoko4 << endl;
 
 			for (int dd = 0; dd < lkoko3; dd++) {
-				wcout << "luku2:" << luku2[dd] << endl;
+				//wcout << "luku2:" << luku2[dd] << endl;
 				vluku2.push_back(luku2[dd]);
 			}
 
 			for (int ee = 0; ee < lkoko4; ee++) {
-				wcout << "luku1:" << luku1[ee] << endl;
+				//wcout << "luku1:" << luku1[ee] << endl;
 				vluku1.push_back(luku1[ee]);
 			}
 
-			wcout << "vluku1 size:" << vluku1.size() << endl;
-			wcout << "vluku2 size:" << vluku2.size() << endl;
+			//wcout << "vluku1 size:" << vluku1.size() << endl;
+			//wcout << "vluku2 size:" << vluku2.size() << endl;
 			
 			std::set_union(vluku1.begin(), vluku1.end(), 
 						   vluku2.begin(), vluku2.end(), 
@@ -564,12 +564,12 @@ int* laske_lauseke(const wchar_t* toinen, int** tmp2) {
 
 			for (it = v.begin(); it != v.end(); ++it) {
 				tulos2[j] = *it;
-				std::wcout << ' ' << tulos2[j];
+				//std::wcout << ' ' << tulos2[j];
 				t3[j] = *it;
 				j++;
 			}
 			//cout << "j:" << j << endl;
-			wcout << endl;
+			//wcout << endl;
 			push(tulos2, j);
 			//t3 = muunnaBinaari(pot, tulos, true);
 			/*for (auto it = v.begin(); it != v.end(); ++it) {
@@ -594,21 +594,21 @@ int* laske_lauseke(const wchar_t* toinen, int** tmp2) {
 			lkoko = size_pop();
 			lkoko2 = size_pop();			
 
-			wcout << "lkoko:" << lkoko << endl;
-			wcout << "lkoko2:" << lkoko2 << endl;
+			//wcout << "lkoko:" << lkoko << endl;
+			//wcout << "lkoko2:" << lkoko2 << endl;
 
 			for (int bb = 0; bb < lkoko; bb++) {
-				wcout << "luku2:" << luku2[bb] << endl;
+				//wcout << "luku2:" << luku2[bb] << endl;
 				vluku2.push_back (luku2[bb]);
 			}
 
 			for (int cc = 0; cc < lkoko2; cc++) {
-				wcout << "luku1:" << luku1[cc] << endl;
+				//wcout << "luku1:" << luku1[cc] << endl;
 				vluku1.push_back (luku1[cc]);
 			}
 			//pot = pow(2, muuttujatlkm);
 			//lkoko = sizeof(luku1) / sizeof(luku1[0]);
-			wcout << "\nluku2.size:" << sizeof(luku2) / sizeof(int*) << endl;
+			//wcout << "\nluku2.size:" << sizeof(luku2) / sizeof(int*) << endl;
 
 			//cout << "lkoko:" << lkoko << endl;
 			//cout << "lkoko2:" << lkoko2 << endl;
@@ -622,12 +622,12 @@ int* laske_lauseke(const wchar_t* toinen, int** tmp2) {
 			//it = set_intersection(luku2, luku2 + lkoko,
 			//	luku1, luku1 + lkoko2, v.begin());
 
-			wcout << "set_intersection ohi" << endl;
+			//wcout << "set_intersection ohi" << endl;
 			//v.resize(it - v.begin());
-			wcout << "v.size:" << v.size() << endl;
+			//wcout << "v.size:" << v.size() << endl;
 
 			tulos = new int[v.size()];
-			wcout << "tulos.size:" << sizeof(tulos) / sizeof(int*) << endl;
+			//wcout << "tulos.size:" << sizeof(tulos) / sizeof(int*) << endl;
 
 			//cout << "*:";
 			wcout << L"\u2229:\n";
@@ -635,11 +635,11 @@ int* laske_lauseke(const wchar_t* toinen, int** tmp2) {
 			wcout << endl;
 			for (it = v.begin(); it != v.end(); ++it) {
 				tulos[j] = *it;
-				std::wcout << ' ' << tulos[j];
+				//std::wcout << ' ' << tulos[j];
 				t3[j] = *it;
 				j++;
 			}
-			wcout << endl;
+			//wcout << endl;
 			//tulos = laske(pot, luku1, luku2, 'K');
 			//cout << "j:" << j << endl;
 			//cout << "\ntulos.size:" << sizeof(tulos) / sizeof(int*) << endl;
@@ -663,7 +663,7 @@ int* laske_lauseke(const wchar_t* toinen, int** tmp2) {
 			luku1 = pop();
 			// Hei, katso allaolevaa riviä vielä
 			lkoko5 = sizeof(luku1) / sizeof(luku1[0]);
-			wcout << "luku1:" << luku1[0] << "," << luku1[1] << endl;
+			//wcout << "luku1:" << luku1[0] << "," << luku1[1] << endl;
 			//pot = pow(2, muuttujatlkm);
 			//cout << "Not:" << luku1;
 			//cout << "Luku2:" << luku2 << endl;
@@ -671,7 +671,7 @@ int* laske_lauseke(const wchar_t* toinen, int** tmp2) {
 			it = set_difference(universumi, universumi + ukoko,
 				luku1, luku1 + lkoko5, v.begin());
 			v.resize(it - v.begin());
-			wcout << "\nv.size():" << v.size() << endl;
+			//wcout << "\nv.size():" << v.size() << endl;
 
 			tulos = new int[v.size()];
 
@@ -679,13 +679,13 @@ int* laske_lauseke(const wchar_t* toinen, int** tmp2) {
 			wcout << endl;
 			for (it = v.begin(); it != v.end(); ++it) {
 				tulos[j] = *it;
-				std::wcout << ' ' << tulos[j];
+				//std::wcout << ' ' << tulos[j];
 				//t3[j] = *it;
 				j++;
 			}
 			//tulos2 = not(bb, luku1);
-			wcout << "\nj:n arvo on:" << j << endl;
-			wcout << "\ntulos.size:" << sizeof(tulos) / sizeof(int*) << endl;
+			//wcout << "\nj:n arvo on:" << j << endl;
+			//wcout << "\ntulos.size:" << sizeof(tulos) / sizeof(int*) << endl;
 			push(tulos, j);
 			/*
 			for (auto it = v.begin(); it != v.end(); ++it) {
@@ -727,17 +727,17 @@ int* laske_lauseke(const wchar_t* toinen, int** tmp2) {
 	lkoko = size_pop();
 	lkoko2 = size_pop();
 
-	wcout << "lkoko:" << lkoko << endl;
-	wcout << "lkoko2:" << lkoko2 << endl;
+	//wcout << "lkoko:" << lkoko << endl;
+	//wcout << "lkoko2:" << lkoko2 << endl;
 
 	for (int bb = 0; bb < lkoko; bb++) {
-		wcout << "luku2:" << luku2[bb] << endl;
+		//wcout << "luku2:" << luku2[bb] << endl;
 	}
 
 	for (int cc = 0; cc < lkoko2; cc++) {
-		wcout << "luku1:" << luku1[cc] << endl;
+		//wcout << "luku1:" << luku1[cc] << endl;
 	}
-	wcout << "pow:" << pow(2, muuttujatlkm) << endl;
+	//wcout << "pow:" << pow(2, muuttujatlkm) << endl;
 	int * mb = muunnaBinaari(luku2, pow(2, muuttujatlkm));
 
 	return 0;
@@ -815,7 +815,7 @@ int main(){
 	*/
 	int** tmp = lauseke_postfix();	
 	wstring lauseke = muunna_postfix();
-	wcout << "lauseke:" << lauseke << endl;	
+	//wcout << "lauseke:" << lauseke << endl;	
 
 	tulos3 = laske_lauseke(lauseke.c_str(), tmp);
 	exit(0);

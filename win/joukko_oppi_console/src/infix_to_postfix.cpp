@@ -89,11 +89,11 @@ wstring convert(wstring infix){
 	
 	//while(infix[i]!='\0'){
 	while(i < infix.size()){
-		wcout << "kierros:" << i << endl;
+		//wcout << "kierros:" << i << endl;
 		
 		if(infix[i]>='w' && infix[i]<='z' || infix[i]>='W' && infix[i]<='Z' || infix[i]=='1' || infix[i]=='0') {
 			postfix += infix[i];
-			wcout << "infix[i]:" << infix[i] << endl;
+			//wcout << "infix[i]:" << infix[i] << endl;
 			/*
 			if((infix[i] == 'a' || infix[i] == 'A') && a==0 && b==0 && c==0 && d==0){
 				em++;
@@ -154,7 +154,7 @@ wstring convert(wstring infix){
 		s.pop();
 	}
 
-	wcout << "Postfix is : " << postfix;
+	//wcout << "Postfix is : " << postfix;
 
 	return postfix;
 }
