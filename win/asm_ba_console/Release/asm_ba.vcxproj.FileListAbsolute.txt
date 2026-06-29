@@ -1,1 +1,2 @@
 C:\c-ohjelmat\ba\unordered_map\Release\asm_ba.exe
+D:\cpp\win\asm_ba_console\Release\asm_ba.exe

@@ -33,10 +33,10 @@ int collectMlkm(string infix) {
 	int a = 0, b = 0, c = 0, d = 0;
 	int g = infix.find("(");
 	int e = infix.find(")");
-	cout << "collectMlkm, g:" << g << "e:" << e << endl;
+	//cout << "collectMlkm, g:" << g << "e:" << e << endl;
 	for (int j = g; j < e; j++) {
 		if (infix[j] >= 'a' && infix[j] <= 'z' || infix[j] >= 'A' && infix[j] <= 'Z') {
-			cout << infix[j] << endl;
+			//cout << infix[j] << endl;
 
 			if (infix[j] == 'A' || infix[j] == 'a') {
 				mlkm++;
@@ -82,11 +82,11 @@ string convert(string infix){
 	
 	//while(infix[i]!='\0'){
 	while(i < infix.size()){
-		cout << "kierros:" << i << endl;
+		//cout << "kierros:" << i << endl;
 		
 		if(infix[i]>='a' && infix[i]<='z' || infix[i]>='A' && infix[i]<='Z' || infix[i]=='1' || infix[i]=='0') {
 			postfix += infix[i];
-			cout << "infix[i]:" << infix[i] << endl;
+			//cout << "infix[i]:" << infix[i] << endl;
 			/*
 			if((infix[i] == 'a' || infix[i] == 'A') && a==0 && b==0 && c==0 && d==0){
 				em++;
@@ -145,7 +145,7 @@ string convert(string infix){
 		s.pop();
 	}
 
-	cout << "Postfix is : " << postfix;
+	//cout << "Postfix is : " << postfix;
 
 	return postfix;
 }

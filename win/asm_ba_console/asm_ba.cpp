@@ -254,11 +254,11 @@ string lauseke_postfix() {
 	cout << "Anna lauseke:" << endl;
 	cin.getline(s, 100);
 	string infix(s);
-	cout << "infix: " << infix << endl;
+	//cout << "infix: " << infix << endl;
 	muuttujatlkm = collectMlkm(infix);
-	cout << "Muuttujien lkm:" << muuttujatlkm << endl;
+	//cout << "Muuttujien lkm:" << muuttujatlkm << endl;
 	infix = concats(infix);
-	cout << "infix:" << infix << endl;
+	//cout << "infix:" << infix << endl;
 	mlkm2 = muuttujatlkm;
 	return convert(infix);
 }
@@ -274,11 +274,11 @@ string pura_parametrit(int argc, char* argv[]) {
 
 	}
 	string infix2(argv[1]);
-	cout << "infix2:" << infix2 << endl;
+	//cout << "infix2:" << infix2 << endl;
 	muuttujatlkm = collectMlkm(infix2);
-	cout << "Muuttujien lkm:" << muuttujatlkm << endl;
+	//cout << "Muuttujien lkm:" << muuttujatlkm << endl;
 	infix2 = concats(infix2);
-	cout << "infix2:" << infix2 << endl;
+	//cout << "infix2:" << infix2 << endl;
 	mlkm2 = muuttujatlkm;
 	return convert(infix2);
 }
@@ -289,7 +289,7 @@ int* laske_lauseke(const char* toinen) {
 	int luku1, luku2;
 	int tulos, tulos2;
 
-	cout << "toinen:" << toinen << endl;
+	//cout << "toinen:" << toinen << endl;
 	
 	laskuri = muuttujatlkm-1;
 	//laskuri = haeMlkm()-2;
@@ -425,13 +425,13 @@ int main(int argc, char* argv[]){
 	tulos3 = laske_lauseke(postfix.c_str());
 	//const char* toinen = postfix.c_str();
 	//cout << "tulos3:" << tulos3 << endl;
-	cout << "Lopputulos taulukosta tulos3 SOP:" << endl;
+	//cout << "Lopputulos taulukosta tulos3 SOP:" << endl;
 	bool bs = lopputulos_SOP(tulos3, pot, muuttujatlkm);		
 			
-	cout << "\nrakennaTaulukko2:" << endl;
+	//cout << "\nrakennaTaulukko2:" << endl;
 	rakennaTaulukko2();
 	muuttujienAlustus();
-	cout << "muuttujienParitus1:" << endl;
+	//cout << "muuttujienParitus1:" << endl;
 	muuttujienParitus1(muuttujatlkm);
 	muuttujienParitus2(muuttujatlkm);
 	vertaaTaulukkoja1(muuttujatlkm);
@@ -447,20 +447,20 @@ int main(int argc, char* argv[]){
 	poistaParilliset_ja_tulostaTaulukko2();
 	asetaTaulukko_ja_tulosta2(muuttujatlkm);
 	
-	cout << "Matriisin taytto ja lasku" << endl;
+	//cout << "Matriisin taytto ja lasku" << endl;
 	matriisinTaytto_ja_lasku(muuttujatlkm);
-	cout << "\nSiirraTaulukot_ja_laske matriisin tulos!" << endl;
+	//cout << "\nSiirraTaulukot_ja_laske matriisin tulos!" << endl;
 	siirraTaulukot_ja_laskeMatriisin_tulos();
-	cout << "TulostaSOP:" << endl;
+	//cout << "TulostaSOP:" << endl;
 	tulostaSOP(muuttujatlkm, pot);
 
-	cout << "\nTulosta POS:" << endl;
+	//cout << "\nTulosta POS:" << endl;
 	bool bs2 = tulostaPOS(tulos3, pot, muuttujatlkm);
-	cout << "\nrakennaTaulukko2:" << endl;
+	//cout << "\nrakennaTaulukko2:" << endl;
 	rakennaTaulukko2();
 	muuttujienAlustus();
 	
-	cout << "muuttujienParitus1:" << endl;
+	//cout << "muuttujienParitus1:" << endl;
 	muuttujienParitus1(muuttujatlkm);
 	muuttujienParitus2(muuttujatlkm);
 	vertaaTaulukkoja1(muuttujatlkm);
@@ -470,13 +470,13 @@ int main(int argc, char* argv[]){
 	poistaKaksoisarvot2(muuttujatlkm);
 	tulostaTaulukot5ja6(muuttujatlkm);
 	poistaParilliset_ja_tulosta();
-	cout << "\npoistaParilliset_ja_tulostaTaulukko2:" << endl;
+	//cout << "\npoistaParilliset_ja_tulostaTaulukko2:" << endl;
 	poistaParilliset_ja_tulostaTaulukko2();
-	cout << "\nasetaTaulukko_ja_tulosta2:" << endl;
+	//cout << "\nasetaTaulukko_ja_tulosta2:" << endl;
 	asetaTaulukko_ja_tulosta2(muuttujatlkm);
-	cout << "\nMatriisin taytto ja lasku:" << endl;
+	//cout << "\nMatriisin taytto ja lasku:" << endl;
 	matriisinTaytto_ja_lasku(muuttujatlkm);
-	cout << "\nSiirraTaulukot_ja_laske matriisin tulos!" << endl;
+	//cout << "\nSiirraTaulukot_ja_laske matriisin tulos!" << endl;
 	siirraTaulukot_ja_laskeMatriisin_tulos();
 	// TulostaPOS2 on kommentissa siihen saakka, että saadaan aikaan POS -tulos ja
 	// tulostus on (-00)' = B+C ja (0--)' = A ja sitä rataa. Se täytyy korjata tulostaPOS2 funktioon!

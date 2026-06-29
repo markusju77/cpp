@@ -22,25 +22,25 @@ void tulostaTaulukko(int lkm, int mlkm) {
 	if (lkm == 4) {
 		for (int b = 0; b < lkm; b++) {
 			it12 = taulukko51.find(arvotNelja[b]);
-			cout << it12->second;
-			if (b == 1) cout << endl;
+			//cout << it12->second;
+			//if (b == 1) cout << endl;
 		}
 	}
 	else if (lkm == 8) {
 		for (int b = 0; b < lkm; b++) {
 			it12 = taulukko51.find(arvotKasi[b]);
-			cout << it12->second;
-			if (b == 3) cout << endl;
+			//cout << it12->second;
+			//if (b == 3) cout << endl;
 		}
 	}
 	else if (lkm == 16) {
 		for (int b = 0; b < lkm; b++) {
 			it12 = taulukko51.find(arvotKuustoista[b]);
-			cout << it12->second;
-			if (b == 7) cout << endl;
+			//cout << it12->second;
+			//if (b == 7) cout << endl;
 		}
 	}
-	cout << endl;
+	//cout << endl;
 }
 void nollaaTyhjienlkm(){
 	tyhjienlkm = 0;

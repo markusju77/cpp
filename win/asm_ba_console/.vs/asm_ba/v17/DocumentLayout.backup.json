@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\c-ohjelmat\\ba\\unordered_map\\",
+  "WorkspaceRootPath": "D:\\cpp\\win\\asm_ba_console\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{28BBB677-A6D3-4D28-8C5E-D6A2012DF8AD}|asm_ba.vcxproj|C:\\c-ohjelmat\\ba\\unordered_map\\quine_mccluskell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{28BBB677-A6D3-4D28-8C5E-D6A2012DF8AD}|asm_ba.vcxproj|solutionrelative:quine_mccluskell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28BBB677-A6D3-4D28-8C5E-D6A2012DF8AD}|asm_ba.vcxproj|C:\\c-ohjelmat\\ba\\unordered_map\\asm_ba.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{28BBB677-A6D3-4D28-8C5E-D6A2012DF8AD}|asm_ba.vcxproj|D:\\cpp\\win\\asm_ba_console\\asm_ba.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{28BBB677-A6D3-4D28-8C5E-D6A2012DF8AD}|asm_ba.vcxproj|solutionrelative:asm_ba.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{28BBB677-A6D3-4D28-8C5E-D6A2012DF8AD}|asm_ba.vcxproj|C:\\c-ohjelmat\\ba\\unordered_map\\karnaugh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{28BBB677-A6D3-4D28-8C5E-D6A2012DF8AD}|asm_ba.vcxproj|D:\\cpp\\win\\asm_ba_console\\quine_mccluskell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{28BBB677-A6D3-4D28-8C5E-D6A2012DF8AD}|asm_ba.vcxproj|solutionrelative:quine_mccluskell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28BBB677-A6D3-4D28-8C5E-D6A2012DF8AD}|asm_ba.vcxproj|D:\\cpp\\win\\asm_ba_console\\karnaugh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{28BBB677-A6D3-4D28-8C5E-D6A2012DF8AD}|asm_ba.vcxproj|solutionrelative:karnaugh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{28BBB677-A6D3-4D28-8C5E-D6A2012DF8AD}|asm_ba.vcxproj|C:\\c-ohjelmat\\ba\\unordered_map\\infix_to_postfix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{28BBB677-A6D3-4D28-8C5E-D6A2012DF8AD}|asm_ba.vcxproj|D:\\cpp\\win\\asm_ba_console\\infix_to_postfix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{28BBB677-A6D3-4D28-8C5E-D6A2012DF8AD}|asm_ba.vcxproj|solutionrelative:infix_to_postfix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{28BBB677-A6D3-4D28-8C5E-D6A2012DF8AD}|asm_ba.vcxproj|C:\\c-ohjelmat\\ba\\unordered_map\\infix_to_postfix.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{28BBB677-A6D3-4D28-8C5E-D6A2012DF8AD}|asm_ba.vcxproj|D:\\cpp\\win\\asm_ba_console\\infix_to_postfix.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{28BBB677-A6D3-4D28-8C5E-D6A2012DF8AD}|asm_ba.vcxproj|solutionrelative:infix_to_postfix.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,34 +46,38 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "quine_mccluskell.cpp",
-              "DocumentMoniker": "C:\\c-ohjelmat\\ba\\unordered_map\\quine_mccluskell.cpp",
+              "DocumentMoniker": "D:\\cpp\\win\\asm_ba_console\\quine_mccluskell.cpp",
               "RelativeDocumentMoniker": "quine_mccluskell.cpp",
-              "ToolTip": "C:\\c-ohjelmat\\ba\\unordered_map\\quine_mccluskell.cpp",
+              "ToolTip": "D:\\cpp\\win\\asm_ba_console\\quine_mccluskell.cpp",
               "RelativeToolTip": "quine_mccluskell.cpp",
-              "ViewState": "AgIAAI8CAAAAAAAAAAAAAEUCAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAALkEAAAAAAAAAAAAAMUEAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2023-03-27T16:35:50.661Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "asm_ba.cpp",
-              "DocumentMoniker": "C:\\c-ohjelmat\\ba\\unordered_map\\asm_ba.cpp",
+              "DocumentMoniker": "D:\\cpp\\win\\asm_ba_console\\asm_ba.cpp",
               "RelativeDocumentMoniker": "asm_ba.cpp",
-              "ToolTip": "C:\\c-ohjelmat\\ba\\unordered_map\\asm_ba.cpp",
+              "ToolTip": "D:\\cpp\\win\\asm_ba_console\\asm_ba.cpp",
               "RelativeToolTip": "asm_ba.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJgBAAAAAAAAAAAAAMcBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2023-03-22T17:33:20.519Z",
               "EditorCaption": ""
@@ -82,41 +86,39 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "karnaugh.cpp",
-              "DocumentMoniker": "C:\\c-ohjelmat\\ba\\unordered_map\\karnaugh.cpp",
+              "DocumentMoniker": "D:\\cpp\\win\\asm_ba_console\\karnaugh.cpp",
               "RelativeDocumentMoniker": "karnaugh.cpp",
-              "ToolTip": "C:\\c-ohjelmat\\ba\\unordered_map\\karnaugh.cpp",
+              "ToolTip": "D:\\cpp\\win\\asm_ba_console\\karnaugh.cpp",
               "RelativeToolTip": "karnaugh.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACoAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-01-01T16:59:45.046Z"
+              "WhenOpened": "2024-01-01T16:59:45.046Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "infix_to_postfix.cpp",
-              "DocumentMoniker": "C:\\c-ohjelmat\\ba\\unordered_map\\infix_to_postfix.cpp",
+              "DocumentMoniker": "D:\\cpp\\win\\asm_ba_console\\infix_to_postfix.cpp",
               "RelativeDocumentMoniker": "infix_to_postfix.cpp",
-              "ToolTip": "C:\\c-ohjelmat\\ba\\unordered_map\\infix_to_postfix.cpp",
+              "ToolTip": "D:\\cpp\\win\\asm_ba_console\\infix_to_postfix.cpp",
               "RelativeToolTip": "infix_to_postfix.cpp",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAAHgAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAJMAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2023-03-27T16:35:33.384Z"
+              "WhenOpened": "2023-03-27T16:35:33.384Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "infix_to_postfix.h",
-              "DocumentMoniker": "C:\\c-ohjelmat\\ba\\unordered_map\\infix_to_postfix.h",
+              "DocumentMoniker": "D:\\cpp\\win\\asm_ba_console\\infix_to_postfix.h",
               "RelativeDocumentMoniker": "infix_to_postfix.h",
-              "ToolTip": "C:\\c-ohjelmat\\ba\\unordered_map\\infix_to_postfix.h",
+              "ToolTip": "D:\\cpp\\win\\asm_ba_console\\infix_to_postfix.h",
               "RelativeToolTip": "infix_to_postfix.h",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAkAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2023-03-27T16:36:26.42Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

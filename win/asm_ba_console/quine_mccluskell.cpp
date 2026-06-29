@@ -9,7 +9,7 @@
 #include "karnaugh.h"
 #include ".\asm_ba.h"
 
-using namespace std;
+//using namespace std;
 vector<pair<int, int>> iv;
 vector<pair<int, int>> iv2;
 vector<pair<int, int >> tunnusparit;
@@ -111,16 +111,16 @@ bool lopputulos_SOP(int* tulos3, int pot, int muuttujatlkm) {
 			tietue t;
 			vector<int> v;
 			tulos4 = muunnaBinaari(muuttujatlkm, b, false);
-			cout << endl;			
+			//cout << endl;			
 			indeksi += tulostaKanooninen(tulos4, muuttujatlkm);
-			cout << "\tbin: ";
+			//cout << "\tbin: ";
 			tulostaBin(tulos4, muuttujatlkm);
-			cout << "\tindeksi:" << indeksi << "\ttunnus:" << b << " ";			
+			//cout << "\tindeksi:" << indeksi << "\ttunnus:" << b << " ";			
 			v.push_back(b);
 			t.bin = convert_int_to_string(tulos4, muuttujatlkm);
 			t.r_indeksi = laskeYkkoset(t.bin, muuttujatlkm);
 			t.tunnus = v;			
-			cout << "\tlaskeYkkoset:" << t.r_indeksi;
+			//cout << "\tlaskeYkkoset:" << t.r_indeksi;
 			taulukko.insert(pair<int, tietue>(e, t));
 			iv.emplace_back(t.r_indeksi, e);			
 			e++;
@@ -147,8 +147,8 @@ bool tulostaPOS(int* tulos3, int pot, int muuttujatlkm) {
 	int ykkoset = 0;
 	iv.clear();
 	taulukko.clear();
-	cout << "muuttujatlkm:" << muuttujatlkm << endl;
-	cout << "\nTulosta POS:" << endl;
+	//cout << "muuttujatlkm:" << muuttujatlkm << endl;
+	//cout << "\nTulosta POS:" << endl;
 	for (int a = pot - 1; a >= 0; a--) {		
 		if (tulos3[a] == 0) {
 			tietue t;
@@ -157,20 +157,20 @@ bool tulostaPOS(int* tulos3, int pot, int muuttujatlkm) {
 			tulos6 = muunnaBinaari(muuttujatlkm, pl2 - b, false);
 			tulos7 = muunnaBinaari(muuttujatlkm, b, false);
 			int turha = tulostaKanooninen(tulos6, muuttujatlkm);
-			if (turha == 0 && muuttujatlkm == 4) cout << " bin:";
-			else cout << "\tbin: ";
+			//if (turha == 0 && muuttujatlkm == 4) cout << " bin:";
+			//else cout << "\tbin: ";
 			tulostaBin(tulos7, muuttujatlkm);
 			indeksi2 = laskeIndeksi(tulos7, muuttujatlkm);
 			//ykkoset= laskeYkkoset(convert_int_to_string(tulos7, muuttujatlkm), muuttujatlkm);
-			cout << "\tindeksi2:" << indeksi2;
-			cout << "\ttunnus:" << b;
+			//cout << "\tindeksi2:" << indeksi2;
+			//cout << "\ttunnus:" << b;
 			
 			v.push_back(b);
 			t.bin = convert_int_to_string(tulos7, muuttujatlkm);
 			t.r_indeksi = laskeYkkoset(t.bin, muuttujatlkm);
 			t.tunnus = v;
-			cout << "\tlaskeYkkoset:" <<  t.r_indeksi;
-			cout << ", t.bin:" << t.bin << endl;
+			//cout << "\tlaskeYkkoset:" <<  t.r_indeksi;
+			//cout << ", t.bin:" << t.bin << endl;
 			taulukko.insert(pair<int, tietue>(e, t));
 			iv.emplace_back(t.r_indeksi, e);
 			e++;
@@ -195,21 +195,21 @@ void rakennaTaulukko2() {
 	ii = 0;
 	taulukko2.clear();
 	//cout << "taulukko.size():" << taulukko.size() << endl;
-	cout << "Taulukko2: " << endl;	
+	//cout << "Taulukko2: " << endl;	
 	for (auto it2 = iv.rbegin(); it2 != iv.rend(); ++it2) {
-		cout << "it2->first:" << it2->first;
-		cout << ", it2->second:" << it2->second << ", ";
+		//cout << "it2->first:" << it2->first;
+		//cout << ", it2->second:" << it2->second << ", ";
 		tietue t2;
 		vector<int> v2;		
 		v2.push_back(taulukko.at(it2->second).tunnus.at(0));
-		cout << "t2.bin:" << taulukko.at(it2->second).bin;
+		//cout << "t2.bin:" << taulukko.at(it2->second).bin;
 		t2.bin = taulukko.at(it2->second).bin;
 		t2.r_indeksi = taulukko.at(it2->second).r_indeksi;
 		t2.tunnus = v2;
 		taulukko2.insert(pair<int, tietue>(ii, t2));
-		cout << "bin:" << taulukko2.at(ii).bin << ",";
-		cout << "r_indeksi:" << taulukko2.at(ii).r_indeksi << ",";
-		cout << "tunnus:" << taulukko2.at(ii).tunnus.at(0) << endl;
+		//cout << "bin:" << taulukko2.at(ii).bin << ",";
+		//cout << "r_indeksi:" << taulukko2.at(ii).r_indeksi << ",";
+		//cout << "tunnus:" << taulukko2.at(ii).tunnus.at(0) << endl;
 		iv2.emplace_back(t2.r_indeksi, ii);
 		ii++;
 	}	
@@ -225,21 +225,21 @@ void muuttujienAlustus() {
 	for (auto it14 = taulukko.begin(); it14 != taulukko.end(); ++it14) {
 		matriisin_otsikko[laskuri32] = it14->second.tunnus.at(0);
 		matriisin_tulos[laskuri32] = 0;
-		cout << "matriisin_otsikko:" << matriisin_otsikko[laskuri32] << endl;
-		cout << ", laskuri32:" << laskuri32 << endl;
+		//cout << "matriisin_otsikko:" << matriisin_otsikko[laskuri32] << endl;
+		//cout << ", laskuri32:" << laskuri32 << endl;
 		laskuri32++;
 	}
 	
 	for (int laskuri20 = 0; laskuri20 < ii * ii; laskuri20++) {
 		joukko2[laskuri20] = -1;
-		cout << "joukko2:" << joukko2[laskuri20] << endl;
+		//cout << "joukko2:" << joukko2[laskuri20] << endl;
 	}
 
 	for (int laskuri21 = 0; laskuri21 < ii * ii; laskuri21++) {
 		apumuuttuja[laskuri21] = false;
-		cout << "apumuuttuja:" << apumuuttuja[laskuri21] << endl;
+		//cout << "apumuuttuja:" << apumuuttuja[laskuri21] << endl;
 	}
-	cout << endl;
+	//cout << endl;
 	//exit(0);
 }
 
@@ -247,11 +247,11 @@ void muuttujienParitus1(int muuttujatlkm) {
 	tunnusparit.clear();
 	tunnus_id_muunnos.clear();
 	AM_laskuri = 0;
-	cout << "taulukko2.size():" << taulukko2.size() << endl;
-	cout << "iv2.size():" << iv2.size() << endl;
-	cout << "tunnusparit.size():" << tunnusparit.size() << endl;
-	cout << "tunnus_id_muunnos.size():" << tunnus_id_muunnos.size() << endl;
-	cout << "AM_laskuri:" << AM_laskuri << endl;
+	//cout << "taulukko2.size():" << taulukko2.size() << endl;
+	//cout << "iv2.size():" << iv2.size() << endl;
+	//cout << "tunnusparit.size():" << tunnusparit.size() << endl;
+	//cout << "tunnus_id_muunnos.size():" << tunnus_id_muunnos.size() << endl;
+	//cout << "AM_laskuri:" << AM_laskuri << endl;
 
 	// Tee nyt sellainen silmukka joka parittaa termin tunnuksien avulla siten etta indeksi on yhden suurempi kuin tunnus !!!
 	for (auto it2 = iv2.begin(); it2 != iv2.end(); ++it2) {
@@ -264,12 +264,12 @@ void muuttujienParitus1(int muuttujatlkm) {
 				// Verrataan f ja g -ryhmia ja pitaisi laskea viela OIKEIN tama!
 				// Vertaa taulukko2:n bin it2->second.bin(x) == it3->second.bin(x) ja laske yhtasuurien lukumaara!
 			if (f + 1 == g) {
-				cout << "taulukko2 it2:" << taulukko2.at(it2->second).tunnus.at(0) << endl;
-				cout << "taulukko2 it3:" << taulukko2.at(it3->second).tunnus.at(0) << endl;
+				//cout << "taulukko2 it2:" << taulukko2.at(it2->second).tunnus.at(0) << endl;
+				//cout << "taulukko2 it3:" << taulukko2.at(it3->second).tunnus.at(0) << endl;
 
 				for (int laskuri23 = 0; laskuri23 < muuttujatlkm; laskuri23++) {
-					cout << taulukko2.at(it2->second).bin[laskuri23] << ",";
-					cout << taulukko2.at(it3->second).bin[laskuri23] << endl;
+					//cout << taulukko2.at(it2->second).bin[laskuri23] << ",";
+					//cout << taulukko2.at(it3->second).bin[laskuri23] << endl;
 
 					if (taulukko2.at(it2->second).bin[laskuri23] == '1' && taulukko2.at(it3->second).bin[laskuri23] == '1' && taulukko2.at(it2->second).bin[laskuri23] == taulukko2.at(it3->second).bin[laskuri23]) {
 						// L A S K E  O S U M I E N  M A A R A
@@ -306,20 +306,20 @@ void muuttujienParitus2(int muuttujatlkm) {
 	taulukko3.clear();
 
 	for (auto it4 = tunnusparit.begin(); it4 != tunnusparit.end(); ++it4) {
-		cout << "(" << it4->first << "," << it4->second << ")" << endl;
+		//cout << "(" << it4->first << "," << it4->second << ")" << endl;
 		// Tassa lasketaan binaarit (suurempi ensin 001 - 000)
 		// Tassa otetaan tunnusparien kaikki parit, jotka myohemmin poistetaan!
 		laskuri2++;
-		cout << endl;
+		//cout << endl;
 	}
 	
-	cout << "Katso allaolevat parit:" << endl;
+	//cout << "Katso allaolevat parit:" << endl;
 	// Tulostetaan kaikki tunnusparien binaariset arvot, niiden indeksien perusteella
 
 	for (auto it5 = tunnus_id_muunnos.begin(); it5 != tunnus_id_muunnos.end(); ++it5) {		
-		cout << taulukko2.at(it5->first).tunnus.at(0) << ",";
-		cout << taulukko2.at(it5->second).tunnus.at(0);
-		cout << endl;
+		//cout << taulukko2.at(it5->first).tunnus.at(0) << ",";
+		//cout << taulukko2.at(it5->second).tunnus.at(0);
+		//cout << endl;
 		tietue t3;
 		vector<int> v3;
 		v3.push_back(taulukko2.at(it5->first).tunnus.at(0));
@@ -332,16 +332,16 @@ void muuttujienParitus2(int muuttujatlkm) {
 			char j = taulukko2.at(it5->second).bin.at(h);
 			bool kk = false;
 			bool ll = false;
-			cout << i << " XOR " << j << endl;
+			//cout << i << " XOR " << j << endl;
 			
 			kk = laskeXOR(i, j);
 
 			if (kk == true) {
-				cout << "-";
+				//cout << "-";
 				t3.bin.append("-");
 			}
-			cout << "=";
-			cout << kk;
+			//cout << "=";
+			//cout << kk;
 
 			ll = laskeAND(i, j);
 
@@ -355,18 +355,18 @@ void muuttujienParitus2(int muuttujatlkm) {
 			
 			/* Ja nyt lasku rediksi !
 			cout << ", ";*/
-			cout << endl;
+			//cout << endl;
 		}
 
 		t3.r_indeksi = laskuri4;
 		t3.tunnus = v3;
-		cout << t3.bin;
-		cout << endl;
+		//cout << t3.bin;
+		//cout << endl;
 		taulukko3.insert(pair<int, tietue>(laskuri3, t3));
 		laskuri3++;
 		laskuri4 = 0;
 	}
-	cout << "XOR ohi" << endl;
+	//cout << "XOR ohi" << endl;
 }
 
 void vertaaTaulukkoja1(int muuttujatlkm) {
@@ -378,7 +378,7 @@ void vertaaTaulukkoja1(int muuttujatlkm) {
 	int m1 = 0;
 	int m2 = 0;
 	laskuri6 = 0;
-	cout << "laskuri3:" << laskuri3 << endl;
+	//cout << "laskuri3:" << laskuri3 << endl;
 
 	// Ja nyt katso taulukko3:n tulokset
 	for (auto it6 = taulukko3.begin(); it6 != taulukko3.end(); ++it6) {
@@ -386,10 +386,10 @@ void vertaaTaulukkoja1(int muuttujatlkm) {
 		int toka = it6->second.tunnus.at(1);
 		int kolmas = 0;
 		int neljas = 0;
-		cout << "Muuttuja 1" << endl;
-		cout << eka << ",";
-		cout << toka << endl;
-		cout << it6->second.bin << endl;
+		//cout << "Muuttuja 1" << endl;
+		//cout << eka << ",";
+		//cout << toka << endl;
+		//cout << it6->second.bin << endl;
 		int f2 = it6->second.r_indeksi;
 
 		for (auto it7 = taulukko3.begin(); it7 != taulukko3.end(); ++it7) {
@@ -397,14 +397,14 @@ void vertaaTaulukkoja1(int muuttujatlkm) {
 			string s1;
 			if (f2 + 1 == g2 && eka < toka) {
 				bool kk = false;
-				cout << "Muuttuja 2" << endl;
+				//cout << "Muuttuja 2" << endl;
 				int eka1 = it7->second.tunnus.at(0);
 				int toka1 = it7->second.tunnus.at(1);
 				kolmas = eka1;
 				neljas = toka1;				
-				cout << kolmas << ",";
-				cout << neljas << endl;
-				cout << it7->second.bin << endl;
+				//cout << kolmas << ",";
+				//cout << neljas << endl;
+				//cout << it7->second.bin << endl;
 				// JATKA TASTA !! JA VERTAA NYT INDEKSILISTAA TOISEEN
 				for (int h2 = 0; h2 < muuttujatlkm; h2++) {
 					char k = it6->second.bin.at(h2);
@@ -414,7 +414,7 @@ void vertaaTaulukkoja1(int muuttujatlkm) {
 					if (k == '-' && l == '-') {
 						// XOR:in tulos k ja l tallennetaan tietue t4:aan
 						osuma = true;
-						cout << "-";
+						//cout << "-";
 						s1.append("-");
 					}
 					if (k != '-' && l != '-') {
@@ -422,16 +422,16 @@ void vertaaTaulukkoja1(int muuttujatlkm) {
 						ll = laskeAND(k, l);
 						kk = laskeXOR(k, l);
 						if (ll == true && kk == false) {
-							cout << "1";
+							//cout << "1";
 							s1.append("1");
 							laskuri5++;
 						}
 						else if (ll == false && kk == false) {
-							cout << "0";
+							//cout << "0";
 							s1.append("0");
 						}
 						else if (kk == true) {
-							cout << "-";
+							//cout << "-";
 							s1.append("-");
 						}
 					}
@@ -449,26 +449,26 @@ void vertaaTaulukkoja1(int muuttujatlkm) {
 					tietue t4;
 					vector<int> v4;
 					t4.bin = s1;
-					cout << endl;
-					cout << t4.bin << endl;
-					cout << "tunnus:\n" << it6->second.tunnus.at(0) << ", " << endl;
-					cout << it6->second.tunnus.at(1) << "," << endl;
-					cout << kolmas << "," << endl;
-					cout << neljas << "," << endl;
+					//cout << endl;
+					//cout << t4.bin << endl;
+					//cout << "tunnus:\n" << it6->second.tunnus.at(0) << ", " << endl;
+					//cout << it6->second.tunnus.at(1) << "," << endl;
+					//cout << kolmas << "," << endl;
+					//cout << neljas << "," << endl;
 					v4.push_back(it6->second.tunnus.at(0));
 					v4.push_back(it6->second.tunnus.at(1));
 					v4.push_back(kolmas);
 					v4.push_back(neljas);
 					t4.r_indeksi = laskuri5;
 					t4.tunnus = v4;
-					cout << "laskuri6:" << laskuri6 << endl;
+					//cout << "laskuri6:" << laskuri6 << endl;
 					taulukko4.insert(pair<int, tietue>(laskuri6, t4));
 					taulukko2_parit.emplace_back(m1, m2);
 					joukko3[laskuri6] = laskuri6;
 					laskuri6++;
 					osuma = false;
 				}
-				cout << endl;
+				//cout << endl;
 			}
 			m2++;
 		}
@@ -485,21 +485,21 @@ void vertaaTaulukkoja2(int muuttujatlkm) {
 	laskuri8 = 0;
 	laskuri11 = 0;
 	// Ja nyt katsotaan TAAS taulukko4:n tulokset ja poistetaan KAKSOISARVOT
-	cout << "Vertaapa:" << endl;
-	cout << taulukko4.size() << endl;
+	//cout << "Vertaapa:" << endl;
+	//cout << taulukko4.size() << endl;
 
 	for (auto it8 = taulukko4.begin(); it8 != taulukko4.end(); it8++) {
 		int eka = it8->second.tunnus.at(0);
 		int toka = it8->second.tunnus.at(1);
 		int kolmas = it8->second.tunnus.at(2);
 		int neljas = it8->second.tunnus.at(3);
-		cout << "Muuttuja 1" << endl;
-		cout << it8->first << endl;
-		cout << eka << ",";
-		cout << toka << ",";
-		cout << kolmas << ",";
-		cout << neljas << endl;
-		cout << it8->second.bin << endl;		
+		//cout << "Muuttuja 1" << endl;
+		//cout << it8->first << endl;
+		//cout << eka << ",";
+		//cout << toka << ",";
+		//cout << kolmas << ",";
+		//cout << neljas << endl;
+		//cout << it8->second.bin << endl;		
 
 		for (auto it9 = it8; it9 != taulukko4.end(); it9++) {
 			int eka1 = it9->second.tunnus.at(0);
@@ -509,28 +509,28 @@ void vertaaTaulukkoja2(int muuttujatlkm) {
 			laskuri11 = vertaaTaulukko4(eka, toka, kolmas, neljas, eka1, toka1, kolmas1, neljas1);
 
 			if (laskuri11 == 4 && it8 != it9) {
-				cout << "Muuttuja 2" << endl;
-				cout << it9->first << endl;
-				cout << eka1 << ",";
-				cout << toka1 << ",";
-				cout << kolmas1 << ",";
-				cout << neljas1 << endl;
-				cout << "laskuri11:" << laskuri11 << endl;
+				//cout << "Muuttuja 2" << endl;
+				//cout << it9->first << endl;
+				//cout << eka1 << ",";
+				//cout << toka1 << ",";
+				//cout << kolmas1 << ",";
+				//cout << neljas1 << endl;
+				//cout << "laskuri11:" << laskuri11 << endl;
 
 				// Ja nyt katso taulukko4:n tulokset
 				for (int h3 = 0; h3 < muuttujatlkm; h3++) {
 					char k = it8->second.bin.at(h3);
 					char l = it9->second.bin.at(h3);
-					cout << k << ",";
+					//cout << k << ",";
 					//cout << l << endl;
 					if (k == l) {
 						laskuri8++;
 					}
 				}
-				cout << endl;
+				//cout << endl;
 				//cout << "laskuri8:" << laskuri8 << endl;
 				if (laskuri8 == muuttujatlkm) {
-					cout << "Osuma" << endl;
+					//cout << "Osuma" << endl;
 					laskuri9[laskuri7] = it9->first;
 					laskuri7++;
 				}
@@ -546,10 +546,10 @@ void vertaaTaulukkoja2(int muuttujatlkm) {
 void poistaKaksoisarvot_ja_tulosta(int muuttujatlkm) {
 	laskuri25 = 0;
 	taulukko5.clear();
-	cout << "Poistetaan kaksoisarvot:" << endl;
-	cout << "laskuri7 (eli kaksoisarvojen lukumaara):" << laskuri7 << endl;
+	//cout << "Poistetaan kaksoisarvot:" << endl;
+	//cout << "laskuri7 (eli kaksoisarvojen lukumaara):" << laskuri7 << endl;
 	if (laskuri7 == 0) {
-		cout << "Taulukossa 4 ei ole kaksoisarvoja." << endl;
+	//	cout << "Taulukossa 4 ei ole kaksoisarvoja." << endl;
 	}
 
 	// Poistetaan kaksoisarvot
@@ -559,30 +559,30 @@ void poistaKaksoisarvot_ja_tulosta(int muuttujatlkm) {
 	}
 
 	// Tulosta taulukko4
-	cout << "Tulosta taulukko4:" << endl;
+	//cout << "Tulosta taulukko4:" << endl;
 	for (auto it10 = taulukko4.begin(); it10 != taulukko4.end(); ++it10) {
-		cout << it10->first << endl;
-		cout << it10->second.tunnus.at(0) << ",";
-		cout << it10->second.tunnus.at(1) << ",";
-		cout << it10->second.tunnus.at(2) << ",";
-		cout << it10->second.tunnus.at(3) << ",";
+		//cout << it10->first << endl;
+		//cout << it10->second.tunnus.at(0) << ",";
+		//cout << it10->second.tunnus.at(1) << ",";
+		//cout << it10->second.tunnus.at(2) << ",";
+		//cout << it10->second.tunnus.at(3) << ",";
 
 		taulukko5.insert(pair<int, tietue>(laskuri25, it10->second));
-		cout << endl;
+		//cout << endl;
 		// Taulukon4 binaariset muuttujat
 		for (int h4 = 0; h4 < muuttujatlkm; h4++) {
-			cout << it10->second.bin.at(h4);
+			//cout << it10->second.bin.at(h4);
 		}
 		laskuri25++;
-		cout << endl;
+		//cout << endl;
 	}
-	cout << endl;
+	//cout << endl;
 }
 
 void uusioKaytto(int muuttujatlkm) {
 	bool osuma = false;
 	taulukko6.clear();
-	cout << "Taulukko4:n uusiokaytto!:" << endl;
+	//cout << "Taulukko4:n uusiokaytto!:" << endl;
 	joukko4 = new int[laskuri25];
 	laskuri30 = new int[laskuri25];
 
@@ -592,8 +592,8 @@ void uusioKaytto(int muuttujatlkm) {
 		int kolmas2 = it10->second.tunnus.at(2);
 		int neljas2 = it10->second.tunnus.at(3);
 
-		cout << "Muuttuja 1" << endl;
-		cout << it10->first << endl;	
+		//cout << "Muuttuja 1" << endl;
+		//cout << it10->first << endl;	
 
 		for (auto it11 = it10; it11 != taulukko5.end(); it11++) {
 			int eka3 = it11->second.tunnus.at(0);
@@ -606,8 +606,8 @@ void uusioKaytto(int muuttujatlkm) {
 			if (it10 != it11) {
 				bool kk = false;
 				laskuri26 = 0;
-				cout << "Muuttuja 2" << endl;
-				cout << it11->first << endl;				
+				//cout << "Muuttuja 2" << endl;
+				//cout << it11->first << endl;				
 					// Vertaa nyt taulukko5:n arvoja !
 					// Ja nyt katso taulukko4:n tulokset
 				for (int h5 = 0; h5 < muuttujatlkm; h5++) {
@@ -660,13 +660,13 @@ void uusioKaytto(int muuttujatlkm) {
 					
 					t5.r_indeksi = laskuri27;
 					t5.tunnus = v5;					
-					cout << "laskuri28:" << laskuri28 << endl;
+					//cout << "laskuri28:" << laskuri28 << endl;
 					taulukko6.insert(pair<int, tietue>(laskuri28, t5));
 					//taulukko2_parit.emplace_back(m1, m2);
 
 					joukko4[laskuri28] = it10->first;
-					cout << "joukko4[laskuri28]:" << endl;
-					cout << joukko4[laskuri28] << endl;
+					//cout << "joukko4[laskuri28]:" << endl;
+					//cout << joukko4[laskuri28] << endl;
 					//cout << "laskuri28:" << laskuri28 << endl;
 					laskuri28++;
 					joukko4[laskuri28] = it11->first;
@@ -674,14 +674,14 @@ void uusioKaytto(int muuttujatlkm) {
 					osuma = false;
 					laskuri26 = 0;
 				}
-				cout << endl;
+				//cout << endl;
 			}
 			//cout << "s2:" << s2 << endl;
 		}
 	}
-	cout << endl;
-	cout << "laskuri28:" << laskuri28 << endl;
-	cout << "taulukko4:n koko:" << taulukko4.size() << endl;
+	//cout << endl;
+	//cout << "laskuri28:" << laskuri28 << endl;
+	//cout << "taulukko4:n koko:" << taulukko4.size() << endl;
 }
 
 void poistaKaksoisarvot2(int muuttujatlkm) {	
@@ -692,21 +692,21 @@ void poistaKaksoisarvot2(int muuttujatlkm) {
 	laskuri35 = 0;
 
 	for (int laskuri34 = 0; laskuri34 < laskuri28; laskuri34++) {
-		cout << joukko4[laskuri34] << endl;
+		//cout << joukko4[laskuri34] << endl;
 		taulukko5.erase(laskuri34);
 	}
 
-	cout << "Poistetaan kaksoisarvot taulukko6:" << endl;
-	cout << "laskuri28 (eli kaksoisarvojen lukumaara):" << laskuri28 << endl;
+	//cout << "Poistetaan kaksoisarvot taulukko6:" << endl;
+	//cout << "laskuri28 (eli kaksoisarvojen lukumaara):" << laskuri28 << endl;
 	if (laskuri7 == 0) {
-		cout << "Taulukossa 4 ei ole kaksoisarvoja." << endl;
+		//cout << "Taulukossa 4 ei ole kaksoisarvoja." << endl;
 	}
 	for (auto it12 = taulukko6.begin(); it12 != taulukko6.end(); it12++) {
-		cout << "it12:" << it12->first << endl;
+		//cout << "it12:" << it12->first << endl;
 		for (auto it13 = it12; it13 != taulukko6.end(); it13++) {
 			if (it12 != it13) {
-				cout << "it13:" << it13->first << endl;
-				cout << "laskuri31:" << laskuri31 << endl;
+				//cout << "it13:" << it13->first << endl;
+				//cout << "laskuri31:" << laskuri31 << endl;
 				for (int h6 = 0; h6 < muuttujatlkm; h6++) {
 					char m = it12->second.bin.at(h6);
 					char n = it13->second.bin.at(h6);
@@ -717,26 +717,26 @@ void poistaKaksoisarvot2(int muuttujatlkm) {
 				if (laskuri29 == 3) {
 					laskuri30[laskuri31] = it13->first;
 
-					cout << "it13->first:" << it13->first << endl;
+					//cout << "it13->first:" << it13->first << endl;
 					laskuri31++;
 					laskuri29 = 0;
 				}
 			}
 		}
-		cout << endl;
+		//cout << endl;
 	}
 	for (int laskuri32 = 0; laskuri32 < laskuri31; laskuri32++) {
 		taulukko6.erase(laskuri30[laskuri32]);
 	}
 
-	cout << "Tulosta taulukko6:" << endl;
+	//cout << "Tulosta taulukko6:" << endl;
 	if (taulukko6.empty()) {
-		cout << "Taulukossa 6 ei ole alkioita." << endl;
+		//cout << "Taulukossa 6 ei ole alkioita." << endl;
 	}
 	else {
 		taulukot.insert(pair<int, unordered_map<int, tietue>>(laskuri35, taulukko6));
 		laskuri33 += taulukko6.size();
-		cout << "taulukko6:n koko:" << taulukko6.size() << endl;
+		//cout << "taulukko6:n koko:" << taulukko6.size() << endl;
 		laskuri35++;
 	}
 }
@@ -744,7 +744,7 @@ void poistaKaksoisarvot2(int muuttujatlkm) {
 void tulostaTaulukot5ja6(int muuttujatlkm) {
 
 	for (auto it14 = taulukko6.begin(); it14 != taulukko6.end(); ++it14) {
-		cout << it14->second.tunnus.at(0) << ",";
+		/*cout << it14->second.tunnus.at(0) << ",";
 		cout << it14->second.tunnus.at(1) << ",";
 		cout << it14->second.tunnus.at(2) << ",";
 		cout << it14->second.tunnus.at(3) << ",";
@@ -752,28 +752,28 @@ void tulostaTaulukot5ja6(int muuttujatlkm) {
 		cout << it14->second.tunnus.at(5) << ",";
 		cout << it14->second.tunnus.at(6) << ",";
 		cout << it14->second.tunnus.at(7) << ",";
-		cout << endl;
+		cout << endl;*/
 		for (int h7 = 0; h7 < muuttujatlkm; h7++) {
 			char m = it14->second.bin.at(h7);
-			cout << m;
+			//cout << m;
 		}
 	}
 	// Nyt yritetaan kayttaa taulukko5:ta matriisin luomiseen
-	cout << "Tulosta taulukko5:" << endl;
+	//cout << "Tulosta taulukko5:" << endl;
 	if (taulukko5.empty()) {
-		cout << "Taulukossa 5 ei ole alkioita." << endl;
+		//cout << "Taulukossa 5 ei ole alkioita." << endl;
 	}
 	else {
 		for (auto it19 = taulukko5.begin(); it19 != taulukko5.end(); ++it19) {
-			cout << it19->second.tunnus.at(0) << ",";
+			/*cout << it19->second.tunnus.at(0) << ",";
 			cout << it19->second.tunnus.at(1) << ",";
 			cout << it19->second.tunnus.at(2) << ",";
 			cout << it19->second.tunnus.at(3) << ",";
-			cout << endl;
+			cout << endl;*/
 		}
 		taulukot.insert(pair<int, unordered_map<int, tietue>>(laskuri35, taulukko5));
 		laskuri33 += taulukko5.size();
-		cout << "taulukko5:n koko:" << taulukko5.size() << endl;
+		//cout << "taulukko5:n koko:" << taulukko5.size() << endl;
 		laskuri35++;
 	}
 }
@@ -800,39 +800,39 @@ void alusta_aseta_ja_tulosta_matriisi(int muuttujatlkm) {
 }
 
 void poistaParilliset_ja_tulosta() {
-	cout << "Poistetaan taulukko3:n parilliset" << endl;
+	/*cout << "Poistetaan taulukko3:n parilliset" << endl;
 	cout << "taulukko2_parit koko:" << taulukko2_parit.size() << endl;
-	cout << "laskuri35:" << laskuri35 << endl;
+	cout << "laskuri35:" << laskuri35 << endl;*/
 
 	//cout << "laskuri3:" << laskuri3 << endl;
 	if (taulukko2_parit.empty()) {
-		cout << "Taulukossa 3 ei ole parillisia." << endl;
+		//cout << "Taulukossa 3 ei ole parillisia." << endl;
 	}
 	else {
-		cout << "taulukko2_parit ei ole tyhjä" << endl;
+		//cout << "taulukko2_parit ei ole tyhjä" << endl;
 	}
 	// Nyt koetetaan purkaa taulukko taulukko2_parit ja poistetaan parit taulukko2:sta !!
 	// Eli lisaa tahan koodi joka poistaa it12->first ja it12->second -parit !!
 
 	for (auto it12 = taulukko2_parit.begin(); it12 != taulukko2_parit.end(); ++it12) {
-		cout << it12->first << ",";
-		cout << it12->second << endl;
+		//cout << it12->first << ",";
+		//cout << it12->second << endl;
 		taulukko3.erase(it12->first);
 		taulukko3.erase(it12->second);
 	}
 
-	cout << "Tulostetaan taulukko3:" << endl;
+	//cout << "Tulostetaan taulukko3:" << endl;
 	//cout << "Muuttujat lkm:" << muuttujatlkm << endl;
 	if (taulukko3.empty()) {
-		cout << "Taulukossa3 ei ole alkioita." << endl;
+		//cout << "Taulukossa3 ei ole alkioita." << endl;
 	}
 	else {
-		cout << "taulukko3:n koko:" << taulukko3.size() << endl;
+		//cout << "taulukko3:n koko:" << taulukko3.size() << endl;
 		for (auto it20 = taulukko3.begin(); it20 != taulukko3.end(); ++it20) {
-			cout << it20->first << ":";
+			/*cout << it20->first << ":";
 			cout << it20->second.tunnus.at(0) << ",";
 			cout << it20->second.tunnus.at(1) << ",";
-			cout << endl;
+			cout << endl;*/
 		}
 		taulukot.insert(pair<int, unordered_map<int, tietue>>(laskuri35, taulukko3));
 		laskuri33 += taulukko3.size();
@@ -852,26 +852,26 @@ void asetaTaulukko_ja_tulostaTaulukko(int muuttujatlkm) {
 		}
 		//cout << endl;
 	}
-	cout << endl;
+	//cout << endl;
 	tulostaTaulukko(pow(2, muuttujatlkm), muuttujatlkm);
 }
 
 void poistaParilliset_ja_tulostaTaulukko2() {
-	cout << "Poistetaan taulukko2:n parilliset" << endl;
+	/*cout << "Poistetaan taulukko2:n parilliset" << endl;
 	cout << "taulukot koko:" << taulukot.size() << endl;
-	cout << "laskuri35:" << laskuri35 << endl;
+	cout << "laskuri35:" << laskuri35 << endl;*/
 
 	if (laskuri19 * 2 == 0) {
-		cout << "Taulukossa 2 ei ole parillisia." << endl;
+		//cout << "Taulukossa 2 ei ole parillisia." << endl;
 	}
 	//cout << laskuri6 << endl;
 	for (int laskuri14 = 0; laskuri14 < laskuri19 * 2; laskuri14++) {
 		taulukko2.erase(joukko2[laskuri14]);		
 	}
 	// Jatka taulukko3.emptysta !!
-	cout << "Tulostetaan taulukko2 (eli parittomat):" << endl;
+	//cout << "Tulostetaan taulukko2 (eli parittomat):" << endl;
 	if (taulukko2.empty()) {
-		cout << "Taulukossa 2 ei ole alkioita." << endl;
+		//cout << "Taulukossa 2 ei ole alkioita." << endl;
 	}
 	else {
 		taulukot.insert(pair<int, unordered_map<int, tietue>>(laskuri35, taulukko2));
@@ -885,15 +885,15 @@ void asetaTaulukko_ja_tulosta2(int muuttujatlkm) {
 
 	for (auto it12 = taulukko2.begin(); it12 != taulukko2.end(); ++it12) {
 		//cout << it12->first << endl;		
-		cout << it12->second.tunnus.at(0) << endl;
+		//cout << it12->second.tunnus.at(0) << endl;
 		asetaTaulukko(it12->second.tunnus.at(0), 1);
 		//cout << it12->second.tunnus.at(1) << endl;
 		//cout << endl;
 		// Taulukon3 binaariset muuttujat
 		for (int h6 = 0; h6 < muuttujatlkm; h6++) {
-			cout << it12->second.bin.at(h6);
+			//cout << it12->second.bin.at(h6);
 		}
-		cout << endl;
+		//cout << endl;
 	}
 	if(!taulukko2.empty()) tulostaTaulukko(pow(2, muuttujatlkm), muuttujatlkm);
 }
@@ -920,23 +920,23 @@ void matriisinTaytto_ja_lasku(int muuttujatlkm) {
 			matriisi[i][kk] = 0;
 		}
 	}
-	cout << "pow:" << pow(2, muuttujatlkm) - 1 << endl;
+	/*cout << "pow:" << pow(2, muuttujatlkm) - 1 << endl;
 	cout << "laskuri33:" << laskuri33 << endl;
 	cout << "ii:" << ii << endl;
-	cout << "taulukot size:" << taulukot.size() << endl;
+	cout << "taulukot size:" << taulukot.size() << endl;*/
 
 	for (auto it16 = taulukot.begin(); it16 != taulukot.end(); it16++)
 	{
 		// Lisaa tahan oikeat luvut ks. toinen lehtio...
 		//std::unordered_map<int, tietue>::iterator it15;
 		//std::unordered_map<int, unordered_map<int, tietue>>::iterator it16;
-		cout << "\nKierros:" << it16->first << endl;
+		//cout << "\nKierros:" << it16->first << endl;
 		if (!it16->second.empty()) {
 			for (auto it15 = it16->second.begin(); it15 != it16->second.end(); it15++) {
 				
-				cout << "it16->first:" << it16->first << endl;
-				cout << "it15->first:" << it15->first << endl;
-				cout << "it15->second.tunnus.size:" << it15->second.tunnus.size() << endl;
+				//cout << "it16->first:" << it16->first << endl;
+				//cout << "it15->first:" << it15->first << endl;
+				//cout << "it15->second.tunnus.size:" << it15->second.tunnus.size() << endl;
 
 				for (int j = 0; j < it15->second.tunnus.size(); j++) {
 					//cout << "isdigit(it15->second.tunnus.at(j):" << isdigit(it15->second.tunnus.at(j)) << endl;
@@ -952,12 +952,12 @@ void matriisinTaytto_ja_lasku(int muuttujatlkm) {
 							
 							if (it16->first > 0) {
 								matriisi[it16->first][k] = 1;
-								cout << "(it16->first:" << it16->first << "), ";
-								cout << "(k:" << k << ")" << endl;
+								//cout << "(it16->first:" << it16->first << "), ";
+								//cout << "(k:" << k << ")" << endl;
 							} else {
 								matriisi[it15->first][k] = 1;
-								cout << "(it15->first:" << it15->first << "), ";
-								cout << "(k:" << k << ")" << endl;
+								//cout << "(it15->first:" << it15->first << "), ";
+								//cout << "(k:" << k << ")" << endl;
 							}
 							//cout << "(matriisi:)" << matriisi[it15->first][k] << ")" << endl;
 						}
@@ -977,15 +977,15 @@ void matriisinTaytto_ja_lasku(int muuttujatlkm) {
 			}
 		}
 	}
-	cout << endl;
+	//cout << endl;
 	//}
-	cout << "laskuri33:" << laskuri33 << endl;
-	cout << "ii:" << ii << endl;
+	//cout << "laskuri33:" << laskuri33 << endl;
+	//cout << "ii:" << ii << endl;
 	// Laske matriisi, nyt yritetaan kaantaa suuntaa !
-	cout << "matriisin otsikot:" << endl;
+	//cout << "matriisin otsikot:" << endl;
 	//for (int k = 0; k < laskuri33; k++) {
 	for (int l = 0; l < ii; l++) {
-		cout << "(" << matriisin_otsikko[l] << "),";
+		//cout << "(" << matriisin_otsikko[l] << "),";
 		for (int k = 0; k < laskuri33; k++) {
 		//for(int k = 0; k < taulukot.size(); k++){
 			//cout << "(l:" << l << "),";
@@ -993,18 +993,18 @@ void matriisinTaytto_ja_lasku(int muuttujatlkm) {
 		
 			if (matriisi[k][l] == 1) {
 				//cout << "matriisi:" << matriisi[k][l] << " ";
-				cout << endl;
+			//	cout << endl;
 				matriisin_tulos[l] += 1;
 				//cout << "matriisin tulos:" << matriisin_tulos[l] << endl;
 				//if(laskuri33==1)
 			}
 		}
 	}
-	cout << endl;
-	cout << "ii:" << ii << endl;
-	cout << "matriisin tulos:" << endl;
+	//cout << endl;
+	//cout << "ii:" << ii << endl;
+	//cout << "matriisin tulos:" << endl;
 	for (int o = 0; o < ii; o++) {
-		cout << matriisin_tulos[o] << ",";
+		//cout << matriisin_tulos[o] << ",";
 		
 		if (matriisin_tulos[o] == 1 && laskuri33 > 1) {
 			matriisin_apurivi[o] = false;
@@ -1033,12 +1033,12 @@ void siirraTaulukot_ja_laskeMatriisin_tulos() {
 			for (auto it18 = it17->second.begin(); it18 != it17->second.end(); ++it18) {
 				//cout << "it18->first:" << it18->first << endl;
 				//vektori_matriisi.emplace_back(it18->first, it18->second);
-				cout <<"koelaskuri:" << koelaskuri << endl;
+				//cout <<"koelaskuri:" << koelaskuri << endl;
 				vektori_matriisi.emplace_back(koelaskuri, it18->second);
 				for (int k = 0; k < it18->second.tunnus.size(); k++) {
 					//cout << "isdigit(it15->second.tunnus.at(j):" << isdigit(it15->second.tunnus.at(j)) << endl;
 					// Etsi tahan jokin funktio joka tarkistaa etta it15 on luku valilla 0 .. 9
-					cout << "it18->second.tunnus.at(" << k << "):" << it18->second.tunnus.at(k) << endl;
+					//cout << "it18->second.tunnus.at(" << k << "):" << it18->second.tunnus.at(k) << endl;
 				}
 				koelaskuri++;
 			}
@@ -1048,23 +1048,23 @@ void siirraTaulukot_ja_laskeMatriisin_tulos() {
 	// Tulosta matriisin_tuloksen ykkosarvot matriisin sarakkeen kohdalta
 	// jossa on ykkonen ja siita sarakkeen arvolla Taulukot muuttujan arvo...
 	for (int m = 0; m < ii; m++) {
-		cout << "m:" << m;
+		//cout << "m:" << m;
 		
 		if (matriisin_tulos[m] == 1 && !matriisin_apurivi[m]) {
-			cout << " matriisin tulos: " << matriisin_tulos[m];
+			//cout << " matriisin tulos: " << matriisin_tulos[m];
 			// Saraketta alaspain kunnes tulee ykkosarvo
 			for (int n = 0; n < laskuri33; n++) {
-				cout << "n:" << n;
+				//cout << "n:" << n;
 				if (matriisi[n][m] == 1) {
-					cout << " matriisi:" << matriisi[n][m] << endl;
+					//cout << " matriisi:" << matriisi[n][m] << endl;
 					// Ja nyt tulosta Taulukot muuttujan arvo
 					for (int l = 0; l < vektori_matriisi[n].second.tunnus.size(); l++) {
-						cout << "vektori_matriisi[n]->second.tunnus.at(" << l << "):" << vektori_matriisi[n].second.tunnus.at(l) << endl;
+						//cout << "vektori_matriisi[n]->second.tunnus.at(" << l << "):" << vektori_matriisi[n].second.tunnus.at(l) << endl;
 					}
 				}
 			}
 		}
-		cout << endl;
+		//cout << endl;
 	}
 }
 
@@ -1076,12 +1076,12 @@ void tulostaSOP(int muuttujatlkm, int pot) {
 	int pareja = 0;
 	int tripla = 0;
 	int uniikki = 0;
-	cout << "muuttujatlkm:" << muuttujatlkm << endl;
+	/*cout << "muuttujatlkm:" << muuttujatlkm << endl;
 	cout << "taulukko4.size():" << taulukko4.size() << endl;
 	cout << "vektori_matriisi:" << vektori_matriisi.size() << endl;
 	cout << "laskuri39:" << laskuri39 << endl;
 	cout << "taulukko2:" << taulukko2.size() << endl;
-	cout << "ii:" << ii << endl;
+	cout << "ii:" << ii << endl;*/
 
 	// Tulosta taulukko4:än tulokset: 0-- 
 	cout << "Tulosta SOP lauseke: " << endl;
@@ -1213,12 +1213,12 @@ void tulostaPOS2(int muuttujatlkm, int pot) {
 	int laskuri38 = 0;
 	int tripla2 = 0;
 	int uniikki2 = 0;
-	cout << "muuttujatlkm:" << muuttujatlkm << endl;
+	/*cout << "muuttujatlkm:" << muuttujatlkm << endl;
 	cout << "taulukko4.size():" << taulukko4.size() << endl;
 	cout << "vektori_matriisi:" << vektori_matriisi.size() << endl;
 	cout << "ii:" << ii << endl;
 	cout << "laskuri39:" << laskuri39 << endl;
-	cout << "laskuri38:" << laskuri38 << endl;
+	cout << "laskuri38:" << laskuri38 << endl;*/
 
 	cout << "\nTulosta POS lauseke: " << endl;
 	cout << getF();
@@ -1353,7 +1353,7 @@ void tulostaPOS2(int muuttujatlkm, int pot) {
 
 void tulostaBin(int *luku, int bittisyys){
 	for(int f=bittisyys-1; f >= 0; f--){
-		std::cout << luku[f];
+		//std::cout << luku[f];
 	}
 }
 
@@ -1513,30 +1513,30 @@ int tulostaKanooninen(int *luku, int bittisyys){
 		
 	// T�ss� on a:n muunnos
 		if(luku[e]==0 && e==bittisyys-1){
-			cout << ca << cnot;
+			//cout << ca << cnot;
 		}else if(luku[e]==1 && e==bittisyys-1){
-			cout << ca;
+			//cout << ca;
 			indeksi++;
 		}	
 	// T�ss� on b:n muunnos
 		if(luku[e]==0 && e==bittisyys-2){
-			cout << cb << cnot;
+			//cout << cb << cnot;
 		}else if(luku[e]==1 && e==bittisyys-2){
-			cout << cb;
+			//cout << cb;
 			indeksi++;
 		}
 	// T�ss� on c:n muunnos
 		if(luku[e]==0 && e==bittisyys-3){
-			cout << cc << cnot;
+			//cout << cc << cnot;
 		}else if(luku[e]==1 && e==bittisyys-3){
-			cout << cc;
+			//cout << cc;
 			indeksi++;
 		}
 	// T�ss� o d:n muunnos
 		if(luku[e]==0 && e==bittisyys-4){
-			cout << cd << cnot;
+			//cout << cd << cnot;
 		}else if(luku[e]==1 && e==bittisyys-4){
-			cout << cd;
+			//cout << cd;
 			indeksi++;
 		}
 	}
